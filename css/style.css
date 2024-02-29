@@ -1,11 +1,31 @@
+:root {
+	--color-main-bg: #f8f9fa;
+	--color-hero-bg: #1b72e8;
+	--color-sidebar-bg: #051e34;
+	--color-green-bg: #198754;
+	--color-yellow-bg: #ffc107;
+	--color-red-bg: #dc3545;
+	--color-bell-bg: #ff8f00;
+}
 .wp-debug {
     border: 1px solid red;
+}
+body {
+    font-family: "Roboto", sans-serif;
+}
+.wrapper nav {
+    height: 100px;
+    /* width: 150px; */
+    background-color: var(--color-main-bg);
 }
 #sidebar {
     width: 120px;
     height: 100%;
-    background-color: grey;
-    padding-top: 100px;
+    background-image: url(../img/sidebar-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--color-sidebar-bg);
+    /* margin-top: 20px; */
 }
 main {
     width: calc(100% - 120px);
@@ -13,8 +33,24 @@ main {
     overflow-y: auto;
     padding-top: 20px;
 }
-.blue {
+#hero {
     width: 100%;
     height: 100px;
-    background-color: blue;
+    background-color: var(--color-hero-bg);
+}
+.small-avatar {
+    width: 30px;
+    height: 30px;
+}
+.small-avatar img {
+    width: 100%;
+}
+.wp-width {
+    min-width: 105px;
+}
+@media screen and (max-width: 576px) {
+    .day-time, 
+    .percent {
+        display: none;
+    }
 }
