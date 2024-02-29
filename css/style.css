@@ -13,14 +13,13 @@
 body {
     font-family: "Roboto", sans-serif;
 }
-.wrapper nav {
-    height: 100px;
-    /* width: 150px; */
+#wrapper nav {
+    height: 60px;
     background-color: var(--color-main-bg);
 }
 #sidebar {
     width: 150px;
-    height: 100%;
+    height: calc(100% - 60px);
     background-image: url(../img/sidebar-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
