@@ -19,286 +19,451 @@
 </head>
 
 <body>
-    <div id="wrapper" class="vh-100 d-flex  ">
-        <nav class="fixed-top py-3 px-2 ">
-            <div class="img-content">
-                <img src="img/logo.svg" alt="Logo Boolean">
+    <div id="wrapper" class="vh-100 d-flex">
+        <nav class="fixed-top">
+            <div class="left-content">
+                <img src="img/logo.svg" id="logo" alt="Logo Boolean">
+                <img src="img/mobile-logo.png" id="mobile-logo" alt="Mobile Logo">
             </div>
-            <div>
-
+            <div class="center-content w-100 mx-3">
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Prova a cercare: Lezioni di Laravel"
+                        aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
             </div>
-            <div>
-
+            <div class="right-top-content">
+                <ul class="d-flex justify-content-between my-auto list-unstyled">
+                    <li>
+                        <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-list-ul"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-circle-question"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <div class="right-bottom-content">
+                            <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-bell" id="bell"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><button class="dropdown-item" type="button">Profilo</button></li>
+                                <li><button class="dropdown-item" type="button">Fatturazione</button></li>
+                                <li><button class="dropdown-item" type="button">Logout</button></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </nav>
-        <div id="sidebar" class="d-flex flex-column justify-content-between text-light p-3 ">
-            <div class="mx-auto">
-                <div class="icon">
-                    <i class="fa-solid fa-house"></i>
-                    <span class="ms-1">Home</span>
-                </div>
-                <div class="icon">
-                    <i class="fa-solid fa-chart-simple"></i>
-                    <span class="ms-1">Stats</span>
-                </div>
-                <div class="icon">
-                    <i class="fa-solid fa-signal"></i>
-                    <span class="ms-1">Signals</span>
-                </div>
-            </div>
-            <div class="mx-auto icon">
-                <i class="fa-solid fa-gear"></i>
-                <span class="ms-1">Admin</span>
-            </div>
+        <div id="sidebar" class="d-flex flex-column justify-content-between pt-4 pb-1">
+            <ul class="mx-auto list-unstyled">
+                <li class="icon">
+                    <a href="#" class="text-decoration-none">
+                        <i class="fa-solid fa-house"></i>
+                        <span class="ms-1">Home</span>
+                    </a>
+                </li>
+                <li class="icon">
+                    <a href="#" class="text-decoration-none">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <span class="ms-2">Stats</span>
+                    </a>
+                </li>
+                <li class="icon">
+                    <a href="#" class="text-decoration-none">
+                        <i class="fa-solid fa-signal"></i>
+                        <span class="ms-1">Signals</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="mx-auto list-unstyled">
+                <li class="icon">
+                    <a href="#" class="text-decoration-none">
+                        <i class="fa-solid fa-gear"></i>
+                        <span class="ms-1">Admin</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <main class="">
-            <div id="hero" class="">
-
-            </div>
-            <div class="container-fluid ">
-                <div class="row ">
-                    <div class="col-12 col-lg-8 ">
-                        <div class="card mt-4">
-                            <div class="card-header">
-                                <h2>Prossime classi</h2>
+        <main>
+            <div class="overflow-y-auto h-100">
+                <div id="hero" class="container-fluid text-light py-4">
+                    <div class="container-fluid d-flex justify-content-between">
+                        <div class="row">
+                            <div class="col px-1">
+                                <h1 class="d-inline-block">Boolean</h1>
+                                <span class="badge rounded-pill">Piano blaze</span>
+                                <div>
+                                    <span class="badge rounded-pill">3 app</span>
+                                    <span class="wp-arrow"><i class="fa-solid fa-angles-right"></i></span>
+                                    <span id="add-app" class="badge rounded-circle "><i
+                                            class="fa-solid fa-plus"></i></span>
+                                    <span id="mobile" class="badge rounded-pill">Boolean mobile app</span>
+                                    <span id="web" class="badge rounded-pill">Boolean web app</span>
+                                    <span id="blog" class="badge rounded-pill">Boolean blog app</span>
+                                </div>
                             </div>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Nome</th>
-                                        <th class="wp-width day-time">Data inizio</th>
-                                        <th class="percent">ROI</th>
-                                        <th>Stato</th>
-                                        <th >Azioni</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="w-100">
-                                            <img src="img/class-avatar.jpg" class="small-avatar" alt="avatar">
-                                            <span class="ms-1">Classe 75</span>
-                                        </td>
-                                        <td class="wp-width day-time">15 Feb 2021</td>
-                                        <td class="percent">20&percnt;</td>
-                                        <td>
-                                            <span class="badge text-bg-success">Done</span>
-                                        </td>
-                                        <td class="wp-width">
-                                            <button type="button" class="btn btn-outline-secondary"><i
-                                                    class="fa-solid fa-pen"></i></button>
-                                            <button type="button" class="btn btn-outline-secondary"><i
-                                                    class="fa-solid fa-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w-100">
-                                            <img src="img/class-avatar.jpg" class="small-avatar" alt="avatar">
-                                            <span class="ms-1">Classe 76</span>
-                                        </td>
-                                        <td class="wp-width day-time">16 Feb 2021</td>
-                                        <td class="percent">20&percnt;</td>
-                                        <td>
-                                            <span class="badge text-bg-success">Done</span>
-                                        </td>
-                                        <td class="wp-width">
-                                            <button type="button" class="btn btn-outline-secondary"><i
-                                                    class="fa-solid fa-pen"></i></button>
-                                            <button type="button" class="btn btn-outline-secondary"><i
-                                                    class="fa-solid fa-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w-100">
-                                            <img src="img/class-avatar.jpg" class="small-avatar" alt="avatar">
-                                            <span class="ms-1">Classe 77</span>
-                                        </td>
-                                        <td class="wp-width day-time">17 Feb 2021</td>
-                                        <td class="percent">20&percnt;</td>
-                                        <td>
-                                            <span class="badge text-bg-warning text-light">process</span>
-                                        </td>
-                                        <td class="wp-width">
-                                            <button type="button" class="btn btn-outline-secondary"><i
-                                                    class="fa-solid fa-pen"></i></button>
-                                            <button type="button" class="btn btn-outline-secondary"><i
-                                                    class="fa-solid fa-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w-100">
-                                            <img src="img/class-avatar.jpg" class="small-avatar" alt="avatar">
-                                            <span class="ms-1">Classe 78</span>
-                                        </td>
-                                        <td class="wp-width day-time">18 Feb 2021</td>
-                                        <td class="percent">20&percnt;</td>
-                                        <td>
-                                            <span class="badge text-bg-success">Done</span>
-                                        </td>
-                                        <td class="wp-width">
-                                            <button type="button" class="btn btn-outline-secondary"><i
-                                                    class="fa-solid fa-pen"></i></button>
-                                            <button type="button" class="btn btn-outline-secondary"><i
-                                                    class="fa-solid fa-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w-100">
-                                            <img src="img/class-avatar.jpg" class="small-avatar" alt="avatar">
-                                            <span class="ms-1">Classe 79</span>
-                                        </td>
-                                        <td class="wp-width day-time">19 Feb 2021</td>
-                                        <td class="percent">20&percnt;</td>
-                                        <td>
-                                            <span class="badge text-bg-danger">failed</span>
-                                        </td>
-                                        <td class="wp-width">
-                                            <button type="button" class="btn btn-outline-secondary"><i
-                                                    class="fa-solid fa-pen"></i></button>
-                                            <button type="button" class="btn btn-outline-secondary"><i
-                                                    class="fa-solid fa-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w-100">
-                                            <img src="img/class-avatar.jpg" class="small-avatar" alt="avatar">
-                                            <span class="ms-1">Classe 80</span>
-                                        </td>
-                                        <td class="wp-width day-time">20 Feb 2021</td>
-                                        <td class="percent">20&percnt;</td>
-                                        <td>
-                                            <span class="badge text-bg-success">Done</span>
-                                        </td>
-                                        <td class="wp-width">
-                                            <button type="button" class="btn btn-outline-secondary"><i
-                                                    class="fa-solid fa-pen"></i></button>
-                                            <button type="button" class="btn btn-outline-secondary"><i
-                                                    class="fa-solid fa-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w-100">
-                                            <img src="img/class-avatar.jpg" class="small-avatar" alt="avatar">
-                                            <span class="ms-1">Classe 81</span>
-                                        </td>
-                                        <td class="wp-width day-time">21 Feb 2021</td>
-                                        <td class="percent">20&percnt;</td>
-                                        <td>
-                                            <span class="badge text-bg-danger">failed</span>
-                                        </td>
-                                        <td class="wp-width">
-                                            <button type="button" class="btn btn-outline-secondary"><i
-                                                    class="fa-solid fa-pen"></i></button>
-                                            <button type="button" class="btn btn-outline-secondary"><i
-                                                    class="fa-solid fa-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w-100">
-                                            <img src="img/class-avatar.jpg" class="small-avatar" alt="avatar">
-                                            <span class="ms-1">Classe 82</span>
-                                        </td>
-                                        <td class="wp-width day-time">22 Feb 2021</td>
-                                        <td class="percent">20&percnt;</td>
-                                        <td>
-                                            <span class="badge text-bg-success">Done</span>
-                                        </td>
-                                        <td class="wp-width">
-                                            <button type="button" class="btn btn-outline-secondary"><i
-                                                    class="fa-solid fa-pen"></i></button>
-                                            <button type="button" class="btn btn-outline-secondary"><i
-                                                    class="fa-solid fa-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
                         </div>
-                        <div class="card mt-4">
-                            <div class="card-header">
-                                <h2>F.A.Q.</h2>
+                        <div class="px-1">
+                            <small>Studenti online negli ultimi 30 minuti</small>
+                            <div class="fs-2">125</div>
+                        </div>
+                        <div class="px-1">
+                            <small>Nuovo studente</small>
+                            <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" type="button"
+                                class="btn btn-outline-light ms-3"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci un nuovo studente</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
                             </div>
-                            <div class="accordion" id="accordionExample">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne" aria-expanded="true"
-                                            aria-controls="collapseOne">
-                                            Come aggiungere un nuovo studente?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show"
-                                        data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Clicca sul + in alto nella sezione blu."
+                            <div class="offcanvas-body">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6 mb-3">
+                                        <div>
+                                            <label for="exampleFormControlInput1" class="form-label">Nome</label>
+                                            <input type="text" class="form-control" placeholder="">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                            aria-expanded="false" aria-controls="collapseTwo">
-                                            Come posso accedere alle informazioni del mio account?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse"
-                                        data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Clicca sull'icona della campanella
+                                    <div class="col-sm-12 col-md-6 mb-3">
+                                        <div>
+                                            <label for="exampleFormControlInput1" class="form-label">Cognome</label>
+                                            <input type="text" class="form-control" placeholder="">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                            aria-expanded="false" aria-controls="collapseThree">
-                                            Posso usare questa dashboard da mobile?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse"
-                                        data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Clicca sul + in alto nella sezione blu."
+                                    <div class="col-sm-12 col-md-6 mb-3">
+                                        <div>
+                                            <label for="email" class="form-label"> Email </label>
+                                            <div class="input-group">
+                                                <span class="input-group-text">@</span>
+                                                <input type="text" class="form-control" placeholder=""
+                                                    aria-label="email">
+                                            </div>
                                         </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 mb-3">
+                                        <div>
+                                            <label for="exampleFormControlInput1" class="form-label">Password</label>
+                                            <input type="text" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 mb-3">
+                                        <div>
+                                            <label for="exampleFormControlInput1" class="form-label">Indirizzo</label>
+                                            <input type="text" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 mb-3">
+                                        <div>
+                                            <label for="exampleFormControlInput1" class="form-label">Città</label>
+                                            <input type="text" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 mb-3">
+                                        <div>
+                                            <label for="exampleFormControlInput1" class="form-label">Stato</label>
+                                            <input class="form-control" list="datalistOptions" placeholder="Scegli">
+                                            <datalist id="datalistOptions">
+                                                <option value="Italia">
+                                                <option value="Estero">
+                                            </datalist>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-2 mb-3">
+                                        <div>
+                                            <label for="exampleFormControlInput1" class="form-label">CAP</label>
+                                            <input type="number" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="formFile" class="form-label">Foto</label>
+                                        <input class="form-control" type="file">
+                                    </div>
+                                    <div class="form-check p-check ms-3 mb-3">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                          Seleziona per proseguire
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="btn btn-primary">Salva</button>
+                                        <button type="button" class="btn btn-warning">Svuota</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="card mt-4">
-                            <div class="card-header">
-                                <h2>Todo</h2>
+                </div>
+                <div class="container-fluid">
+                    <div class="row ">
+                        <div class="col-12 col-lg-8 ">
+                            <div class="card mt-4">
+                                <div class="card-header">
+                                    <h2>Prossime classi</h2>
+                                </div>
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Nome</th>
+                                            <th class="wp-width day-time">Data inizio</th>
+                                            <th class="percent">ROI</th>
+                                            <th>Stato</th>
+                                            <th>Azioni</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="w-100">
+                                                <img src="img/class-avatar.jpg" class="small-avatar" alt="avatar">
+                                                <span class="ms-1">Classe 75</span>
+                                            </td>
+                                            <td class="wp-width day-time">15 Feb 2021</td>
+                                            <td class="percent">20&percnt;</td>
+                                            <td>
+                                                <span class="badge text-bg-success">Done</span>
+                                            </td>
+                                            <td class="wp-width">
+                                                <button type="button" class="btn btn-outline-secondary"><i
+                                                        class="fa-solid fa-pen"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary"><i
+                                                        class="fa-solid fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-100">
+                                                <img src="img/class-avatar.jpg" class="small-avatar" alt="avatar">
+                                                <span class="ms-1">Classe 76</span>
+                                            </td>
+                                            <td class="wp-width day-time">16 Feb 2021</td>
+                                            <td class="percent">20&percnt;</td>
+                                            <td>
+                                                <span class="badge text-bg-success">Done</span>
+                                            </td>
+                                            <td class="wp-width">
+                                                <button type="button" class="btn btn-outline-secondary"><i
+                                                        class="fa-solid fa-pen"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary"><i
+                                                        class="fa-solid fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-100">
+                                                <img src="img/class-avatar.jpg" class="small-avatar" alt="avatar">
+                                                <span class="ms-1">Classe 77</span>
+                                            </td>
+                                            <td class="wp-width day-time">17 Feb 2021</td>
+                                            <td class="percent">20&percnt;</td>
+                                            <td>
+                                                <span class="badge text-bg-warning text-light">process</span>
+                                            </td>
+                                            <td class="wp-width">
+                                                <button type="button" class="btn btn-outline-secondary"><i
+                                                        class="fa-solid fa-pen"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary"><i
+                                                        class="fa-solid fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-100">
+                                                <img src="img/class-avatar.jpg" class="small-avatar" alt="avatar">
+                                                <span class="ms-1">Classe 78</span>
+                                            </td>
+                                            <td class="wp-width day-time">18 Feb 2021</td>
+                                            <td class="percent">20&percnt;</td>
+                                            <td>
+                                                <span class="badge text-bg-success">Done</span>
+                                            </td>
+                                            <td class="wp-width">
+                                                <button type="button" class="btn btn-outline-secondary"><i
+                                                        class="fa-solid fa-pen"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary"><i
+                                                        class="fa-solid fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-100">
+                                                <img src="img/class-avatar.jpg" class="small-avatar" alt="avatar">
+                                                <span class="ms-1">Classe 79</span>
+                                            </td>
+                                            <td class="wp-width day-time">19 Feb 2021</td>
+                                            <td class="percent">20&percnt;</td>
+                                            <td>
+                                                <span class="badge text-bg-danger">failed</span>
+                                            </td>
+                                            <td class="wp-width">
+                                                <button type="button" class="btn btn-outline-secondary"><i
+                                                        class="fa-solid fa-pen"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary"><i
+                                                        class="fa-solid fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-100">
+                                                <img src="img/class-avatar.jpg" class="small-avatar" alt="avatar">
+                                                <span class="ms-1">Classe 80</span>
+                                            </td>
+                                            <td class="wp-width day-time">20 Feb 2021</td>
+                                            <td class="percent">20&percnt;</td>
+                                            <td>
+                                                <span class="badge text-bg-success">Done</span>
+                                            </td>
+                                            <td class="wp-width">
+                                                <button type="button" class="btn btn-outline-secondary"><i
+                                                        class="fa-solid fa-pen"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary"><i
+                                                        class="fa-solid fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-100">
+                                                <img src="img/class-avatar.jpg" class="small-avatar" alt="avatar">
+                                                <span class="ms-1">Classe 81</span>
+                                            </td>
+                                            <td class="wp-width day-time">21 Feb 2021</td>
+                                            <td class="percent">20&percnt;</td>
+                                            <td>
+                                                <span class="badge text-bg-danger">failed</span>
+                                            </td>
+                                            <td class="wp-width">
+                                                <button type="button" class="btn btn-outline-secondary"><i
+                                                        class="fa-solid fa-pen"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary"><i
+                                                        class="fa-solid fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-100">
+                                                <img src="img/class-avatar.jpg" class="small-avatar" alt="avatar">
+                                                <span class="ms-1">Classe 82</span>
+                                            </td>
+                                            <td class="wp-width day-time">22 Feb 2021</td>
+                                            <td class="percent">20&percnt;</td>
+                                            <td>
+                                                <span class="badge text-bg-success">Done</span>
+                                            </td>
+                                            <td class="wp-width">
+                                                <button type="button" class="btn btn-outline-secondary"><i
+                                                        class="fa-solid fa-pen"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary"><i
+                                                        class="fa-solid fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="card m-3">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        <span><input type="checkbox" name="" id=""> Kickoff nuove classi</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span><input type="checkbox" name="" id=""> Lezione su Bootstrap 5 in classe
-                                            #75</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span><input type="checkbox" name="" id=""> Controllare username github
-                                            studenti</span>
-                                    </li>
-                                </ul>
+                            <div class="card mt-4">
+                                <div class="card-header">
+                                    <h2>F.A.Q.</h2>
+                                </div>
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne" aria-expanded="true"
+                                                aria-controls="collapseOne">
+                                                Come aggiungere un nuovo studente?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse show"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Clicca sul + in alto nella sezione blu."
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                Come posso accedere alle informazioni del mio account?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Clicca sull'icona della campanella
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree">
+                                                Posso usare questa dashboard da mobile?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Clicca sul + in alto nella sezione blu."
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="card mt-4 p-3">
-                            <img src="img/stats.jpeg" class="card-img-top" alt="stats">
-                            <div class="card-body">
-                                <h5 class="card-title">Utenti attivi</h5>
-                                <p class="card-text">Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
+                        <div class="col-12 col-lg-4">
+                            <div class="card mt-4">
+                                <div class="card-header">
+                                    <h2>Todo</h2>
+                                </div>
+                                <div class="card-body m-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Kickoff nuove classi
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            checked>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Lezione su Bootstrap 5 in classe
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            checked>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Controllare username github studenti
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Gennaio: 1200</li>
-                                <li class="list-group-item">Febbraio: 800</li>
-                                <li class="list-group-item">Marzo: 1500</li>
-                            </ul>
-                            <div class="card-body">
-                                <a href="#" class="card-link">Visualizza report approfondito</a>
+                            <div class="card my-4 p-3">
+                                <div class="card ">
+                                    <img src="img/stats.jpeg" class="card-img-top" alt="stats">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Utenti attivi</h5>
+                                        <p class="card-text">
+                                            Lista degli utenti attivi in piattaforma nell'ultimo mese
+                                        </p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Gennaio: 1200</li>
+                                        <li class="list-group-item">Febbraio: 800</li>
+                                        <li class="list-group-item">Marzo: 1500</li>
+                                    </ul>
+                                    <div class="card-body">
+                                        <a href="#" class="card-link">Visualizza report approfondito</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

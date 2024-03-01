@@ -1,22 +1,53 @@
 :root {
-	--color-main-bg: #f8f9fa;
-	--color-hero-bg: #1b72e8;
-	--color-sidebar-bg: #051e34;
-	--color-green-bg: #198754;
-	--color-yellow-bg: #ffc107;
-	--color-red-bg: #dc3545;
-	--color-bell-bg: #ff8f00;
+    --color-main-bg: #f8f9fa;
+    --color-hero-bg: #1b72e8;
+    --color-sidebar-bg: #051e34;
+    --color-green-bg: #198754;
+    --color-yellow-bg: #ffc107;
+    --color-red-bg: #dc3545;
+    --color-bell-bg: #ff8f00;
 }
+
 .wp-debug {
     border: 1px solid red;
 }
+
 body {
     font-family: "Roboto", sans-serif;
 }
+
 #wrapper nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 8px;
     height: 60px;
     background-color: var(--color-main-bg);
 }
+
+#wrapper nav .left-content,
+#wrapper nav .right-content {
+    width: 160px;
+}
+
+#mobile-logo {
+    width: 50px;
+    display: none;
+}
+
+#mobile-logo img {
+    width: 100%;
+}
+
+.right-top-content ul li button {
+    border: 0;
+    background-color: var(--color-main-bg);
+}
+
+#bell {
+    color: var(--color-bell-bg);
+}
+
 #sidebar {
     width: 120px;
     height: calc(100% - 60px);
@@ -26,34 +57,120 @@ body {
     background-color: var(--color-sidebar-bg);
     margin-top: 60px;
 }
+
+.icon a {
+    color: var(--color-main-bg);
+}
+
 #sidebar .icon:hover {
     background-color: lightgray;
     cursor: pointer;
 }
+
 main {
     width: calc(100% - 120px);
-    height: 100%;
-    overflow-y: auto;
+    background-color: var(--color-main-bg);
+    padding-top: 60px;
 }
+
 #hero {
     width: 100%;
-    height: 100px;
     background-color: var(--color-hero-bg);
-    margin-top: 60px;
 }
+
+#hero .row .col span:not(.wp-arrow) {
+    background-color: #165bba;
+}
+
+#hero .row .col span:hover:not(.wp-arrow) {
+    background-color: lightgrey;
+    opacity: 0.8;
+    cursor: pointer;
+}
+#add-app {
+    width: 25px;
+    height: 25px;
+    line-height: 19px;
+    display: none;
+}
+
 .small-avatar {
     width: 30px;
     height: 30px;
 }
+
 .small-avatar img {
     width: 100%;
 }
+
 .wp-width {
     min-width: 105px;
 }
+
+.offcanvas.offcanvas-end{
+    width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+
+    #mobile-logo {
+        display: block;
+    }
+
+    #wrapper nav .left-content {
+        width: 50px;
+    }
+
+    #wrapper nav .right-top-content {
+        width: 30px;
+    }
+
+    #wrapper nav .right-top-content ul li:not(:last-child) {
+        display: none;
+    }
+
+    #wrapper nav .right-bottom-content ul li:nth-child(1),
+    #wrapper nav .right-bottom-content ul li:nth-child(2),
+    #wrapper nav .right-bottom-content ul li:nth-child(3) {
+        display: block;
+    }
+
+    #wrapper nav .right-bottom-content ul li {
+        margin: 0;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #sidebar {
+        width: 70px;
+    }
+
+    main {
+        width: calc(100% - 70px);
+    }
+
+    #sidebar .icon span {
+        display: none;
+    }
+    #mobile, #web, #blog {
+        display: none;
+    }
+    #add-app {
+        display: block;
+    }
+    .offcanvas.offcanvas-end{
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 576px) {
-    .day-time, 
+
+    .day-time,
     .percent {
         display: none;
     }
+    
+
 }
