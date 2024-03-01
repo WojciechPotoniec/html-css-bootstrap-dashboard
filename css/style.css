@@ -163,6 +163,9 @@ main {
     .offcanvas.offcanvas-end{
         width: 100%;
     }
+    .container-fluid {
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 576px) {
