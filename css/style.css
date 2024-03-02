@@ -78,15 +78,16 @@ main {
     background-color: var(--color-hero-bg);
 }
 
-#hero .row .col span:not(.wp-arrow) {
+#hero span:not(.wp-arrow) {
     background-color: #165bba;
 }
 
-#hero .row .col span:hover:not(.wp-arrow) {
+#hero span:hover:not(.wp-arrow) {
     background-color: lightgrey;
     opacity: 0.8;
     cursor: pointer;
 }
+
 #add-app {
     width: 25px;
     height: 25px;
@@ -107,7 +108,7 @@ main {
     min-width: 105px;
 }
 
-.offcanvas.offcanvas-end{
+.offcanvas.offcanvas-end {
     width: 70%;
 }
 
@@ -154,17 +155,19 @@ main {
     #sidebar .icon span {
         display: none;
     }
-    #mobile, #web, #blog {
+
+    #mobile,
+    #web,
+    #blog {
         display: none;
     }
+
     #add-app {
-        display: block;
+        display: inline-block;
     }
-    .offcanvas.offcanvas-end{
+
+    .offcanvas.offcanvas-end {
         width: 100%;
-    }
-    .container-fluid {
-        flex-direction: column;
     }
 }
 
@@ -174,6 +177,19 @@ main {
     .percent {
         display: none;
     }
-    
+    #hero > div {
+        flex-direction: column;
+    }
 
+    .left-hero {
+        order: 1;
+    }
+
+    .center-hero {
+        order: 2;
+    }
+
+    .right-hero {
+        order: 0;
+    }
 }
